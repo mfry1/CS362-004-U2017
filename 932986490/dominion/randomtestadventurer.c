@@ -16,14 +16,15 @@ int adventurerValidate(struct gameState *before, struct gameState *after, int pl
       actualDeckAndDiscard = after->deckCount[player] + after->discardCount[player],
       testPassed = 1,
       befTreasureCount = 0,
-      aftTreasureCount = 0;
+      aftTreasureCount = 0,
+      i;
 
-  for(int i = 0; i < before->handCount[player]; i++) {
+  for(i = 0; i < before->handCount[player]; i++) {
     if (before->hand[player][i] == copper || before->hand[player][i] == silver || before->hand[player][i] == gold ) {
       befTreasureCount++;
     }
   }
-  for(int i = 0; i < after->handCount[player]; i++) {
+  for(i = 0; i < after->handCount[player]; i++) {
     if (after->hand[player][i] == copper || after->hand[player][i] == silver || after->hand[player][i] == gold ) {
       aftTreasureCount++;
     }
