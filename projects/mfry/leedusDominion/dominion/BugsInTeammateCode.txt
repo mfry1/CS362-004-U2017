@@ -1,0 +1,8 @@
+TITLE: Smithy drew 5 cards instead of 3
+DESCRIPTION: Unit tests and random tests fail every time with the actual hand count after running smithy being 2 more than the expected hand count. 
+WHERE: Line 1321 of dominion.c
+
+TITLE: Embargo subtracts coin instead of adding 2
+DESCRIPTION: Unit test shows the embargo card decreases the coin count by 1 instead increasing it by 2 as expected. This fails every time. 
+WHERE: Line 1344 of dominion.c
+
